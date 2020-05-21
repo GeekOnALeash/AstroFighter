@@ -1,0 +1,15 @@
+﻿{
+  "$schema": "https://raw.githubusercontent.com/DotNetAnalyzers/StyleCopAnalyzers/master/StyleCop.Analyzers/StyleCop.Analyzers/Settings/stylecop.schema.json",
+  "settings": {
+    "documentationRules": {
+      "companyName": "Stellar Pixels",
+      "copyrightText": " Copyright (c) {companyName}. All rights reserved.",
+      "documentationCulture": "en-GB",
+      "headerDecoration": "-----------------------------------------------------------------------",
+      "xmlHeader": false
+    },
+    "indentation": {
+      "useTabs": true
+    }
+  }
+}
