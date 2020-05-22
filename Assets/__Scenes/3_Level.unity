@@ -1135,8 +1135,10 @@ GameObject:
   - component: {fileID: 597940390}
   - component: {fileID: 597940389}
   - component: {fileID: 597940385}
+  - component: {fileID: 597940392}
   - component: {fileID: 597940387}
   - component: {fileID: 597940388}
+  - component: {fileID: 597940391}
   m_Layer: 0
   m_Name: Plane1
   m_TagString: Untagged
@@ -1238,6 +1240,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86f4bc009b81458b903c2a7c728b6e9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &597940391
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597940384}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 781e78dbbce4f40b9a047c8582202f1f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &597940392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597940384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da76ac7b2c19418589a323bd4d50d0f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 597940391}
+  movementAxis: {fileID: 11400000, guid: e1cbe92e96acb4a0fbe13ce3f91d375d, type: 2}
 --- !u!1 &658576567
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,7 +3007,7 @@ MonoBehaviour:
   m_Path: {fileID: 1422651959}
   m_UpdateMethod: 0
   m_PositionUnits: 1
-  m_Speed: 3
+  m_Speed: 4
   m_Position: 0
 --- !u!4 &1926869273
 Transform:
