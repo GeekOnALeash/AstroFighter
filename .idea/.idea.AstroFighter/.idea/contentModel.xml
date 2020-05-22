@@ -31,6 +31,9 @@
             <e p="ReadOnlyPropertyDrawer.cs" t="Include" />
             <e p="SceneDrawer.cs" t="Include" />
             <e p="ShowWhenAttributeDrawer.cs" t="Include" />
+            <e p="Tests" t="Include">
+              <e p="InputHandlerTest.cs" t="Include" />
+            </e>
             <e p="UIStyleInstance.cs" t="Include" />
             <e p="UnusedAssetDetector.cs" t="Include" />
           </e>
@@ -41,7 +44,8 @@
           <e p="Helpers" t="Include">
             <e p="InputHandler.cs" t="Include" />
             <e p="LockCinemachineCameraX.cs" t="Include" />
-            <e p="ShipMover.cs" t="Include" />
+            <e p="PlaneAnimator.cs" t="Include" />
+            <e p="PlaneMover.cs" t="Include" />
           </e>
           <e p="MyEditor" t="Include">
             <e p="Attributes" t="Include">

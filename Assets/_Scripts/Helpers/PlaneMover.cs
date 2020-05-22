@@ -3,21 +3,23 @@
 	using Com.StellarPixels.AstroFighter.Scriptable.System;
 	using UnityAtoms.BaseAtoms;
 	using UnityEngine;
+	using UnityEngine.Assertions;
 
 	/// <inheritdoc />
 	/// <summary>
 	/// Moves the ship.
 	/// </summary>
-	public sealed class ShipMover : MonoBehaviour
+	[RequireComponent(typeof(Rigidbody2D))]
+	public sealed class PlaneMover : MonoBehaviour
 	{
 		private const float BoundsMin = 0.13f;
 		private const float BoundsMax = 0.87f;
 
 		// TODO: Figure a way to calculate this based on the dolly cart speed and loosely coupling them, as the dolly speed will affect how this will look.
-		private const float DefaultVertical = 0.3f;
+		private const float DefaultVertical = 0.5f;
 
 		[SerializeField]
-		private float speed = 6.0F;
+		private float lerpDuration = 6.0F;
 
 		[SerializeField]
 		private BoolVariable verticalPressed;
@@ -31,6 +33,7 @@
 		private void Start()
 		{
 			_rigidbody2D = GetComponent<Rigidbody2D>();
+			Assert.IsNotNull(_rigidbody2D, "_rigidbody2D is null");
 		}
 
 		private void FixedUpdate()
@@ -47,7 +50,7 @@
 
 			Vector2 newVector = movementAxis.Value;
 			newVector.y = verticalPressed.Value ? movementAxis.Value.y : DefaultVertical;
-			newVector *= speed * Time.deltaTime;
+			newVector *= lerpDuration * Time.deltaTime;
 			rbPos += newVector;
 
 			Vector2 pos = SystemVariables.Instance.mainCamera.WorldToViewportPoint(rbPos);
@@ -57,7 +60,7 @@
 			var lerp = Vector3.Lerp(
 									rbPos,
 									SystemVariables.Instance.mainCamera.ViewportToWorldPoint(pos),
-									Time.deltaTime * speed);
+									Time.deltaTime * lerpDuration);
 
 			_rigidbody2D.position = lerp;
 		}
