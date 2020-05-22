@@ -1,6 +1,9 @@
-component_depth: 1
+component_depth: 3
 languages:
 - csharp
 exclude:
 - /Assets/Asset Store/.*
-- /Assets/Tilemap Extras/.*
+- /Assets/_Scripts/Helpers/Array2DEditor/.*
+- /Assets/Plugins/.*
+- /Assets/_Scripts/Editor/.*
+- /Assets/_Scripts/MyEditor/Attributes/.*
