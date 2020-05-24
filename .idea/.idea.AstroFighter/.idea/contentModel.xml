@@ -24,7 +24,6 @@
             <e p="FindMissingScriptsRecursively.cs" t="Include" />
             <e p="HelpBoxAttributeDrawer.cs" t="Include" />
             <e p="IntervalRangeDrawer.cs" t="Include" />
-            <e p="IsCompiling.cs" t="Include" />
             <e p="MinMaxDrawer.cs" t="Include" />
             <e p="MinMaxRangeFloatAttributeDrawer.cs" t="Include" />
             <e p="MinMaxRangeIntAttributeDrawer.cs" t="Include" />
@@ -42,10 +41,22 @@
             <e p="PlayerHandler.cs" t="Include" />
           </e>
           <e p="Helpers" t="Include">
+            <e p="Bullet.cs" t="Include" />
+            <e p="EnemyExplosionHelper.cs" t="Include" />
+            <e p="Explosion.cs" t="Include" />
+            <e p="ExplosionHelper.cs" t="Include" />
+            <e p="HitPointHelper.cs" t="Include" />
+            <e p="IExplode.cs" t="Include" />
             <e p="InputHandler.cs" t="Include" />
+            <e p="ITakesDamage.cs" t="Include" />
+            <e p="IWeapon.cs" t="Include" />
             <e p="LockCinemachineCameraX.cs" t="Include" />
+            <e p="Mover.cs" t="Include" />
+            <e p="ObstacleCollider.cs" t="Include" />
             <e p="PlaneAnimator.cs" t="Include" />
             <e p="PlaneMover.cs" t="Include" />
+            <e p="PlayerExplosionHelper.cs" t="Include" />
+            <e p="Weapon.cs" t="Include" />
           </e>
           <e p="MyEditor" t="Include">
             <e p="Attributes" t="Include">
@@ -83,6 +94,11 @@
             </e>
             <e p="GenericSingletonClass.cs" t="Include" />
           </e>
+          <e p="Pooling" t="Include">
+            <e p="IPoolableObject.cs" t="Include" />
+            <e p="PoolableObject.cs" t="Include" />
+            <e p="PrefabPool.cs" t="Include" />
+          </e>
           <e p="Scriptable" t="Include">
             <e p="Events" t="Include">
               <e p="GameEvent.cs" t="Include" />
@@ -104,6 +120,21 @@
               <e p="ListExtensions.cs" t="Include" />
             </e>
             <e p="GenericSingletonClass.cs" t="Include" />
+          </e>
+        </e>
+        <e p="Asset Store" t="Include">
+          <e p="8-Bit_Action_Free" t="Include">
+            <e p="Readme.txt" t="Include" />
+          </e>
+          <e p="EasyButtons" t="Include">
+            <e p="ButtonAttribute.cs" t="Include" />
+            <e p="ButtonsExample.cs" t="Include" />
+            <e p="CustomEditorButtonsExample.cs" t="Include" />
+            <e p="Editor" t="Include">
+              <e p="ButtonEditor.cs" t="Include" />
+              <e p="CustomEditorButtonsExampleEditor.cs" t="Include" />
+              <e p="EasyButtonsEditorExtensions.cs" t="Include" />
+            </e>
           </e>
         </e>
       </e>

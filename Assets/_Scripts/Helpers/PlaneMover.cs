@@ -1,4 +1,6 @@
-﻿namespace Com.StellarPixels.AstroFighter.Helpers
+﻿// Copyright (c) Stellar Pixels. All rights reserved.
+
+namespace Com.StellarPixels.AstroFighter.Helpers
 {
 	using Com.StellarPixels.AstroFighter.Scriptable.System;
 	using UnityAtoms.BaseAtoms;
@@ -12,8 +14,8 @@
 	[RequireComponent(typeof(Rigidbody2D))]
 	public sealed class PlaneMover : MonoBehaviour
 	{
-		private const float BoundsMin = 0.13f;
-		private const float BoundsMax = 0.87f;
+		private const float BoundsMin = 0.14f;
+		private const float BoundsMax = 0.86f;
 
 		// TODO: Figure a way to calculate this based on the dolly cart speed and loosely coupling them, as the dolly speed will affect how this will look.
 		private const float DefaultVertical = 0.5f;
