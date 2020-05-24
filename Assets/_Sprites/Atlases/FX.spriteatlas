@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FX
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 0
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings:
+    - serializedVersion: 3
+      m_BuildTarget: DefaultTexturePlatform
+      m_MaxTextureSize: 2048
+      m_ResizeAlgorithm: 0
+      m_TextureFormat: -1
+      m_TextureCompression: 0
+      m_CompressionQuality: 50
+      m_CrunchedCompression: 0
+      m_AllowsAlphaSplitting: 0
+      m_Overridden: 0
+      m_AndroidETC2FallbackOverride: 0
+      m_ForceMaximumCompressionQuality_BC6H_BC7: 0
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 1
+    variantMultiplier: 1
+    packables:
+    - {fileID: 102900000, guid: 5feac933c24ea4a03b71f7a2860a3a61, type: 3}
+    totalSpriteSurfaceArea: 119761
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -2186286280926938127, guid: 3a3c53e18b7844055bb143dca972fa00, type: 3}
+  - {fileID: -6129446341363469647, guid: 3a3c53e18b7844055bb143dca972fa00, type: 3}
+  - {fileID: 7464954915652299504, guid: 3a3c53e18b7844055bb143dca972fa00, type: 3}
+  - {fileID: -2825890160642299113, guid: 3a3c53e18b7844055bb143dca972fa00, type: 3}
+  - {fileID: -6964191914541030211, guid: 3a3c53e18b7844055bb143dca972fa00, type: 3}
+  - {fileID: -8345307750667906139, guid: 3a3c53e18b7844055bb143dca972fa00, type: 3}
+  - {fileID: 9085083961675938830, guid: 3a3c53e18b7844055bb143dca972fa00, type: 3}
+  - {fileID: 3446878951465588338, guid: 3a3c53e18b7844055bb143dca972fa00, type: 3}
+  - {fileID: -7161885685425712781, guid: 3a3c53e18b7844055bb143dca972fa00, type: 3}
+  - {fileID: 8940023979327817128, guid: 3a3c53e18b7844055bb143dca972fa00, type: 3}
+  - {fileID: 21300000, guid: f9c6dc845882c4204889e33dfc07a8cb, type: 3}
+  - {fileID: 1871906383385562927, guid: ac6b8669f58864a4480c6b2c9c5d43f7, type: 3}
+  - {fileID: 950242065716622878, guid: ac6b8669f58864a4480c6b2c9c5d43f7, type: 3}
+  - {fileID: 5684552838703836615, guid: ac6b8669f58864a4480c6b2c9c5d43f7, type: 3}
+  - {fileID: -4927540249515241657, guid: ac6b8669f58864a4480c6b2c9c5d43f7, type: 3}
+  - {fileID: -3556220708966662747, guid: ac6b8669f58864a4480c6b2c9c5d43f7, type: 3}
+  - {fileID: -1000500801407918923, guid: ac6b8669f58864a4480c6b2c9c5d43f7, type: 3}
+  - {fileID: -5243772346084840235, guid: ac6b8669f58864a4480c6b2c9c5d43f7, type: 3}
+  - {fileID: -8092295105046505211, guid: ac6b8669f58864a4480c6b2c9c5d43f7, type: 3}
+  - {fileID: 3730887761424324059, guid: ac6b8669f58864a4480c6b2c9c5d43f7, type: 3}
+  - {fileID: -4009157606203222040, guid: ac6b8669f58864a4480c6b2c9c5d43f7, type: 3}
+  - {fileID: -5371098934410574880, guid: ac6b8669f58864a4480c6b2c9c5d43f7, type: 3}
+  - {fileID: 6048126006442850607, guid: 0864a69e3fd6f4027b2ed73977aa6bef, type: 3}
+  - {fileID: 3617674677853211582, guid: 0864a69e3fd6f4027b2ed73977aa6bef, type: 3}
+  - {fileID: -8439579550211227771, guid: 0864a69e3fd6f4027b2ed73977aa6bef, type: 3}
+  - {fileID: -3755266575495488311, guid: 0864a69e3fd6f4027b2ed73977aa6bef, type: 3}
+  - {fileID: 316273758907435743, guid: 0864a69e3fd6f4027b2ed73977aa6bef, type: 3}
+  - {fileID: -8099554210623717383, guid: 0864a69e3fd6f4027b2ed73977aa6bef, type: 3}
+  - {fileID: 706829994781105290, guid: 0864a69e3fd6f4027b2ed73977aa6bef, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - Bullet Explosion_7
+  - Bullet Explosion_6
+  - Bullet Explosion_5
+  - Bullet Explosion_4
+  - Bullet Explosion_3
+  - Bullet Explosion_2
+  - Bullet Explosion_1
+  - Bullet Explosion_0
+  - Bullet Explosion_9
+  - Bullet Explosion_8
+  - Bullet1
+  - explosion_9
+  - explosion_8
+  - explosion_5
+  - explosion_4
+  - explosion_7
+  - explosion_6
+  - explosion_1
+  - explosion_0
+  - explosion_3
+  - explosion_2
+  - explosion_10
+  - Exposion_1
+  - Exposion_0
+  - Exposion_3
+  - Exposion_2
+  - Exposion_5
+  - Exposion_4
+  - Exposion_6
+  m_Tag: FX
+  m_IsVariant: 0
