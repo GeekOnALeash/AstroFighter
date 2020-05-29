@@ -1,13 +1,12 @@
 namespace Com.StellarPixels.AstroFighter.Helpers
 {
-	using Com.StellarPixels.Pooling;
+	using Com.StellarPixels.AstroFighter.Pooling;
 	using JetBrains.Annotations;
-	using UnityEngine;
 
 	/// <summary>
 	/// Explosion.
 	/// </summary>
-	public class Explosion : MonoBehaviour, IPoolableObject
+	public class Explosion : PoolableObject
 	{
 		/// <summary>
 		/// Used as an animation function.
@@ -15,9 +14,7 @@ namespace Com.StellarPixels.AstroFighter.Helpers
 		[UsedImplicitly]
 		public void Destroy()
 		{
-			PrefabPool.Return(this);
+			gameObject.SetActive(false);
 		}
-
-		public IPoolableObject Prefab { get; set; }
 	}
 }

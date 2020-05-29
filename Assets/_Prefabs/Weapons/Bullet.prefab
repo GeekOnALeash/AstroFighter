@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 5602931037735317630}
   - component: {fileID: 3611375814137074508}
   - component: {fileID: 8773208951484030229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Bullet
-  m_TagString: FX
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,7 +98,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 755ca2beede00427f8584e0a7921e98c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 5037062487676260790, guid: 1cbd2062b85174d629ff62c4228b6b0c, type: 3}
+  explosion: {fileID: 11400000, guid: e96eaa2fd41cc44ffa42b592ec89aefd, type: 2}
+  target: 1
   attackPoints:
     _usage: 0
     _value: 5
@@ -117,7 +118,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8ba7b556570475b9449c0685125559f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: {x: 0, y: 10}
+  useDirectVector: 0
+  direction: 0
+  vector: {x: 0, y: 10}
+  speed: 10
 --- !u!50 &3611375814137074508
 Rigidbody2D:
   serializedVersion: 4

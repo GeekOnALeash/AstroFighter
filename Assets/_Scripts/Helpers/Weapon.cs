@@ -1,7 +1,9 @@
-﻿namespace Com.StellarPixels.AstroFighter.Helpers
+﻿// Copyright (c) Stellar Pixels. All rights reserved.
+
+namespace Com.StellarPixels.AstroFighter.Helpers
 {
 	using System.Diagnostics.CodeAnalysis;
-	using Com.StellarPixels.Pooling;
+	using Com.StellarPixels.AstroFighter.Pooling;
 	using UnityAtoms.BaseAtoms;
 	using UnityEngine;
 
@@ -13,7 +15,7 @@
 	public sealed class Weapon : MonoBehaviour, IWeapon
 	{
 		[SerializeField]
-		private Bullet bullet;
+		private PoolableItem bullet;
 
 		[SerializeField]
 		private bool autoFire;
@@ -68,8 +70,7 @@
 				return;
 			}
 
-			var newBullet = PrefabPool.Get(bullet);
-			newBullet.gameObject.transform.position = transform.position;
+			PoolBehaviour.Instance.GetBulletAtPosition(bullet.PoolName, transform.position);
 
 			PlaySound();
 		}

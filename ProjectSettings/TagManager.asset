@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - FX
+  - UpperBoundary
   layers:
   - Default
   - TransparentFX
@@ -14,9 +15,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - FX
+  - Characters
+  - Terrain
   - 
   - 
   - 

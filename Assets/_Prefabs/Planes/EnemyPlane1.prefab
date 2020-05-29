@@ -12,11 +12,11 @@ GameObject:
   - component: {fileID: 2059931557501596045}
   - component: {fileID: 2059931557501596044}
   - component: {fileID: 2059931557501596043}
-  - component: {fileID: 1582905576617674229}
   - component: {fileID: 2059931557501596042}
   - component: {fileID: 2059931557501596047}
   - component: {fileID: 5287376590514359562}
-  m_Layer: 0
+  - component: {fileID: 72828144}
+  m_Layer: 9
   m_Name: EnemyPlane1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 0.34375, y: 0.546875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -120,20 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33e3d94f3b9d43409e1430f13a4b2f77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosion: {fileID: 2528649143986823142, guid: 10571df81b27a403088e1ab10f90f9e9, type: 3}
---- !u!114 &1582905576617674229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2059931557501596041}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ba7b556570475b9449c0685125559f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: {x: 0, y: -1}
+  explosion: {fileID: 11400000, guid: 197a92a18d1c748bda1861c037a6fd08, type: 2}
 --- !u!114 &2059931557501596042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,6 +176,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &72828144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059931557501596041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d5542622e9a406685ae3f6c0ead5522, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  useWaypoints: 0
+  isStationery: 0
+  wayPoints:
+  - {fileID: 0}
 --- !u!1 &7533477643667518724
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,7 +202,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8596384080786883960}
   - component: {fileID: 3095810460431354233}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Shadow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -265,7 +268,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.5, y: 1.5}
+  m_Size: {x: 0.34375, y: 0.515625}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

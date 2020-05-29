@@ -2,6 +2,9 @@
 
 namespace Com.StellarPixels.AstroFighter.Helpers
 {
+	using System;
+	using System.Diagnostics.CodeAnalysis;
+	using Com.StellarPixels.UtilityLibraries.Attributes;
 	using UnityEngine;
 
 	/// <inheritdoc />
@@ -11,15 +14,19 @@ namespace Com.StellarPixels.AstroFighter.Helpers
 	public sealed class Mover : MonoBehaviour
 	{
 		[SerializeField]
-		private Vector2 speed = new Vector2(0.0f, 2.0f);
+		private bool useDirectVector;
 
-		private Rigidbody2D _rigidbody2D;
-		private bool _stopMovement;
+		[SerializeField]
+		[ShowWhen(nameof(useDirectVector), false)]
+		private MoveDirection direction;
 
-		private void Start()
-		{
-			_rigidbody2D = GetComponent<Rigidbody2D>();
-		}
+		[SerializeField]
+		[ShowWhen(nameof(useDirectVector))]
+		private Vector2 vector = new Vector2(0.0f, 10.0f);
+
+		[SerializeField]
+		[ShowWhen(nameof(useDirectVector), false)]
+		private float speed = 10f;
 
 		private void Update()
 		{
@@ -28,25 +35,57 @@ namespace Com.StellarPixels.AstroFighter.Helpers
 
 		private void DoMovement()
 		{
-			if (_stopMovement || _rigidbody2D is null)
+			if (useDirectVector)
 			{
+				Move(vector);
 				return;
 			}
 
-			_rigidbody2D.velocity = speed;
+			switch (direction)
+			{
+				case MoveDirection.Up:
+					MoveVertical(speed);
+					return;
+				case MoveDirection.Down:
+					MoveVertical(-speed);
+					return;
+				case MoveDirection.Left:
+					MoveHorizontal(-speed);
+					return;
+				case MoveDirection.Right:
+					MoveHorizontal(speed);
+					return;
+				default:
+					throw new ArgumentOutOfRangeException();
+			}
 		}
 
-		private void StopMovement()
+		/// <summary>
+		/// Move object.
+		/// </summary>
+		/// <param name="velocity">Velocity to move object.</param>
+		[SuppressMessage("ReSharper", "SA1202", Justification = "Unity events first.")]
+		private void Move(Vector2 velocity)
 		{
-			_stopMovement = true;
+			MoveVertical(velocity.y);
+			MoveHorizontal(velocity.x);
+		}
 
-			if (_rigidbody2D is null)
-			{
-				return;
-			}
+		private void MoveVertical(float velocity)
+		{
+			var positionToAdd = transform.up * (Time.deltaTime * velocity);
+			AddToPosition(positionToAdd);
+		}
 
-			_rigidbody2D.velocity = Vector2.zero;
-			_rigidbody2D.constraints = RigidbodyConstraints2D.FreezeAll;
+		private void MoveHorizontal(float velocity)
+		{
+			var positionToAdd = transform.right * (Time.deltaTime * velocity);
+			AddToPosition(positionToAdd);
+		}
+
+		private void AddToPosition(Vector3 position)
+		{
+			transform.position += position;
 		}
 	}
 }

@@ -1,17 +1,12 @@
-﻿// Copyright (c) Stellar Pixels. All rights reserved.
+// Copyright (c) Stellar Pixels. All rights reserved.
 
-// ReSharper disable once CheckNamespace
-namespace Com.StellarPixels.Pooling
+namespace Com.StellarPixels.AstroFighter.Pooling
 {
 	using UnityEngine;
 
-	/// <inheritdoc cref="IPoolableObject" />
+	/// <inheritdoc />
 	/// <summary>
-	/// Poolable objects base class.
+	/// Object that can be pooled.
 	/// </summary>
-	public sealed class PoolableObject : MonoBehaviour, IPoolableObject
-	{
-		/// <inheritdoc/>
-		public IPoolableObject Prefab { get; set; }
-	}
+	public class PoolableObject : MonoBehaviour { }
 }

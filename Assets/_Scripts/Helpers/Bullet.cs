@@ -1,6 +1,8 @@
-﻿namespace Com.StellarPixels.AstroFighter.Helpers
+﻿// Copyright (c) Stellar Pixels. All rights reserved.
+
+namespace Com.StellarPixels.AstroFighter.Helpers
 {
-	using Com.StellarPixels.Pooling;
+	using System;
 	using JetBrains.Annotations;
 	using UnityAtoms.BaseAtoms;
 	using UnityEngine;
@@ -9,20 +11,35 @@
 	/// <summary>
 	/// Helper for fired bullet.
 	/// </summary>
-	[RequireComponent(typeof(Rigidbody2D))]
-	public sealed class Bullet : ExplosionHelper, IPoolableObject
+	public sealed class Bullet : ExplosionHelper
 	{
+		[SerializeField]
+		private Target target;
+
 		[SerializeField]
 		private IntReference attackPoints;
 
 		private void OnBecameInvisible()
 		{
-			PrefabPool.Return(this);
+			ReturnToPool();
+		}
+
+		private void OnTriggerEnter2D(Collider2D other)
+		{
+			if (other.CompareTag("UpperBoundary"))
+			{
+				ReturnToPool();
+			}
 		}
 
 		private void OnCollisionEnter2D([NotNull] Collision2D other)
 		{
-			if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("FX"))
+			if (other.gameObject.CompareTag("FX"))
+			{
+				return;
+			}
+
+			if (target == Target.Enemy && other.gameObject.CompareTag("Player"))
 			{
 				return;
 			}
@@ -38,6 +55,6 @@
 			Explode();
 		}
 
-		public IPoolableObject Prefab { get; set; }
+		private void ReturnToPool() => gameObject.SetActive(false);
 	}
 }

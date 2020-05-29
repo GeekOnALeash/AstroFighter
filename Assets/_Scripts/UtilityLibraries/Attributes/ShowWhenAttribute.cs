@@ -1,7 +1,8 @@
 ﻿// Copyright (c) Stellar Pixels. All rights reserved.
 
 // ReSharper disable once CheckNamespace
-namespace Com.ArkAngelApps.UtilityLibraries.Attributes
+// ReSharper disable once MissingBlankLines
+namespace Com.StellarPixels.UtilityLibraries.Attributes
 {
 	using System;
 	using System.Diagnostics.CodeAnalysis;

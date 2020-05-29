@@ -1,17 +1,19 @@
-﻿namespace Com.StellarPixels.AstroFighter.Helpers
+﻿// Copyright (c) Stellar Pixels. All rights reserved.
+
+namespace Com.StellarPixels.AstroFighter.Helpers
 {
 	using System.Diagnostics.CodeAnalysis;
-	using Com.StellarPixels.Pooling;
+	using Com.StellarPixels.AstroFighter.Pooling;
 	using UnityEngine;
 
 	/// <inheritdoc cref="IExplode" />
 	/// <summary>
 	/// Helper for objects that can be exploded.
 	/// </summary>
-	public class ExplosionHelper : MonoBehaviour, IExplode
+	public class ExplosionHelper : PoolableObject, IExplode
 	{
 		[SerializeField]
-		private Explosion explosion;
+		private PoolableItem explosion;
 
 		/// <inheritdoc />
 		/// <summary>
@@ -20,18 +22,8 @@
 		[SuppressMessage("ReSharper", "SA1202", Justification = "Unity events first.")]
 		public virtual void Explode()
 		{
-			var test = PrefabPool.Get(explosion);
-			test.gameObject.transform.position = transform.position;
-
-			var poolable = gameObject.GetComponent<IPoolableObject>();
-
-			if (!(poolable is null))
-			{
-				PrefabPool.Return(poolable);
-				return;
-			}
-
-			Destroy(gameObject);
+			PoolBehaviour.Instance.GetExplosionAtPosition(explosion.PoolName, transform.position);
+			PoolBehaviour.Instance.Return(this);
 		}
 	}
 }

@@ -12,6 +12,8 @@ namespace Com.StellarPixels.UtilityLibraries
 	/// </summary>
 	/// <typeparam name="T">Class to make singleton.</typeparam>
 	[DisallowMultipleComponent]
+
+	// ReSharper disable once ClassCanBeSealed.Global
 	public class GenericSingletonClass<T> : MonoBehaviour
 		where T : Component
 	{

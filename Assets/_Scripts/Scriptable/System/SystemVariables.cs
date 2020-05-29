@@ -1,4 +1,6 @@
-﻿namespace Com.StellarPixels.AstroFighter.Scriptable.System
+﻿// Copyright (c) Stellar Pixels. All rights reserved.
+
+namespace Com.StellarPixels.AstroFighter.Scriptable.System
 {
 	using com.ArkAngelApps.TheAvarice.Scriptable;
 	using com.ArkAngelApps.TheAvarice.Scriptable.Events;
