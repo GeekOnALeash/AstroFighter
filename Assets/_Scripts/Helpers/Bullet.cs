@@ -24,16 +24,13 @@ namespace Com.StellarPixels.AstroFighter.Helpers
 			ReturnToPool();
 		}
 
-		private void OnTriggerEnter2D(Collider2D other)
+		private void OnTriggerEnter2D([NotNull] Collider2D other)
 		{
 			if (other.CompareTag("UpperBoundary"))
 			{
 				ReturnToPool();
 			}
-		}
 
-		private void OnCollisionEnter2D([NotNull] Collision2D other)
-		{
 			if (other.gameObject.CompareTag("FX"))
 			{
 				return;
