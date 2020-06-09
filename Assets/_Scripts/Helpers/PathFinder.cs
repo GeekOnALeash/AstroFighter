@@ -3,23 +3,15 @@
 namespace Com.StellarPixels.AstroFighter.Helpers
 {
 	using Com.StellarPixels.UtilityLibraries;
-	using Com.StellarPixels.UtilityLibraries.Attributes;
 	using UnityEngine;
 
+	/// <inheritdoc />
 	/// <summary>
 	/// Class for path finding between way points.
 	/// </summary>
 	[RequireComponent(typeof(Rigidbody2D))]
 	public sealed class PathFinder : CachedTransformBase
 	{
-		[SerializeField]
-		private bool useWaypoints;
-
-		[ShowWhen(nameof(useWaypoints), false)]
-		[SerializeField]
-		private bool isStationery;
-
-		[ShowWhen(nameof(useWaypoints), true)]
 		[SerializeField]
 		private WayPoint[] wayPoints;
 
@@ -30,7 +22,7 @@ namespace Com.StellarPixels.AstroFighter.Helpers
 
 		private void FixedUpdate()
 		{
-			if (!isStationery && _isVisble && !_pathComplete)
+			if (_isVisble && !_pathComplete)
 			{
 				StartMovement();
 			}

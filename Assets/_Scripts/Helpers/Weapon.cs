@@ -1,21 +1,21 @@
-﻿// Copyright (c) Stellar Pixels. All rights reserved.
+// Copyright (c) Stellar Pixels. All rights reserved.
 
 namespace Com.StellarPixels.AstroFighter.Helpers
 {
+	using System.Collections.Generic;
 	using System.Diagnostics.CodeAnalysis;
-	using Com.StellarPixels.AstroFighter.Pooling;
+	using Com.StellarPixels.AstroFighter.Handlers;
 	using UnityAtoms.BaseAtoms;
 	using UnityEngine;
 
-	/// <inheritdoc cref="IWeapon" />
+	/// <inheritdoc />
 	/// <summary>
-	/// Weapon that can be fired.
+	/// Handler for all firing points of the individual weapon.
 	/// </summary>
-	[RequireComponent(typeof(AudioSource))]
-	public sealed class Weapon : MonoBehaviour, IWeapon
+	public sealed class Weapon : MonoBehaviour
 	{
 		[SerializeField]
-		private PoolableItem bullet;
+		private List<ProjectileHandler> weapons;
 
 		[SerializeField]
 		private bool autoFire;
@@ -23,18 +23,21 @@ namespace Com.StellarPixels.AstroFighter.Helpers
 		[SerializeField]
 		private FloatReference fireRate;
 
-		private AudioSource _audioSource;
-
 		private float _timer;
-
-		private void Start()
-		{
-			_audioSource = GetComponent<AudioSource>();
-		}
 
 		private void Update()
 		{
 			AttemptToFire();
+		}
+
+		/// <summary>
+		/// Resets weapon auto fire timer.
+		/// </summary>
+		[SuppressMessage("ReSharper", "SA1202", Justification = "Unity events first.")]
+		internal void ResetWeapon()
+		{
+			_timer = fireRate;
+			enabled = true;
 		}
 
 		private void AttemptToFire()
@@ -43,47 +46,26 @@ namespace Com.StellarPixels.AstroFighter.Helpers
 			{
 				_timer -= Time.deltaTime;
 
-				if (!(_timer < 0))
+				if (!(_timer <= 0))
 				{
 					return;
 				}
 
-				Fire();
-
 				_timer = fireRate;
-
+			} else if (!Input.GetKeyDown(KeyCode.Space))
+			{
 				return;
 			}
 
-			if (Input.GetKeyDown(KeyCode.Space))
-			{
-				Fire();
-			}
+			Fire();
 		}
 
-		/// <inheritdoc />
-		[SuppressMessage("ReSharper", "SA1202", Justification = "Unity events first.")]
-		public void Fire()
+		private void Fire()
 		{
-			if (bullet is null)
+			foreach (var bullet in weapons)
 			{
-				return;
+				bullet.Fire();
 			}
-
-			PoolBehaviour.Instance.GetBulletAtPosition(bullet.PoolName, transform.position);
-
-			PlaySound();
-		}
-
-		private void PlaySound()
-		{
-			// ReSharper disable once UseNullPropagation
-			if (_audioSource is null)
-			{
-				return;
-			}
-
-			_audioSource.Play();
 		}
 	}
 }

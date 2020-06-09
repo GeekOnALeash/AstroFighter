@@ -3,7 +3,7 @@ namespace Com.StellarPixels.AstroFighter.Helpers
 	/// <summary>
 	/// Interface for a weapon.
 	/// </summary>
-	public interface IWeapon
+	internal interface IWeapon
 	{
 		/// <summary>
 		/// Fires weapon.

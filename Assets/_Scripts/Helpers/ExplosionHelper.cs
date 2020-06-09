@@ -23,7 +23,7 @@ namespace Com.StellarPixels.AstroFighter.Helpers
 		public virtual void Explode()
 		{
 			PoolBehaviour.Instance.GetExplosionAtPosition(explosion.PoolName, transform.position);
-			PoolBehaviour.Instance.Return(this);
+			PoolBehaviour.Return(this);
 		}
 	}
 }

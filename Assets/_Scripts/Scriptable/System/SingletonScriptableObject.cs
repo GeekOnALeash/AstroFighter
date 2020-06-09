@@ -1,18 +1,16 @@
-﻿/************************************************************
- * Better Singleton by David Darias
- * Use as you like - credit where due would be appreciated :D
- * Licence: WTFPL V2, Dec 2014
- * Tested on Unity v5.6.0 (should work on earlier versions)
- * 03/02/2017 - v1.1 
- * **********************************************************/
+﻿// Copyright (c) Stellar Pixels. All rights reserved.
 
-using UnityEngine;
-
-namespace com.ArkAngelApps.TheAvarice.Scriptable
+// ReSharper disable All
+namespace Com.StellarPixels.AstroFighter.Scriptable.System
 {
-	public class SingletonScriptableObject<T> : ScriptableObject where T : ScriptableObject
+	using global::System.Diagnostics.CodeAnalysis;
+	using UnityEngine;
+
+	[SuppressMessage("ReSharper", "SA1600", Justification = "Not my script.")]
+	public class SingletonScriptableObject<T> : ScriptableObject
+		where T : ScriptableObject
 	{
-		//Private reference to the scriptable object
+		// Private reference to the scriptable object
 		private static T __instance;
 		private static bool __instantiated;
 
@@ -27,8 +25,8 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable
 
 				var singletonName = typeof(T).Name;
 
-				//Look for the singleton on the resources folder
-				var assets = Resources.LoadAll<T>("");
+				// Look for the singleton on the resources folder
+				var assets = Resources.LoadAll<T>(string.Empty);
 
 				if (assets.Length > 1)
 				{

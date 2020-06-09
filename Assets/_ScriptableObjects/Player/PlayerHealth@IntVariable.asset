@@ -9,10 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f3ec5ddc84840e68ad798fc8c70f09c, type: 3}
-  m_Name: BulletExplosion@PoolableItem
+  m_Script: {fileID: 11500000, guid: cf8a67b68db3d4650908f8cf6adeda60, type: 3}
+  m_Name: PlayerHealth@IntVariable
   m_EditorClassIdentifier: 
-  poolName: BulletExplosion
-  poolableObject: {fileID: 5037062487676260790, guid: 1cbd2062b85174d629ff62c4228b6b0c, type: 3}
-  preloadSize: 80
-  initialPoolCapacity: 100
+  _developerDescription: 
+  _id: 
+  _value: 100
+  Changed: {fileID: 0}
+  ChangedWithHistory: {fileID: 0}
+  _oldValue: 100
+  _initialValue: 100
+  _preChangeTransformers: []

@@ -1,3 +1,5 @@
+// Copyright (c) Stellar Pixels. All rights reserved.
+
 namespace Com.StellarPixels.AstroFighter.Helpers
 {
 	using UnityEngine;
@@ -9,17 +11,17 @@ namespace Com.StellarPixels.AstroFighter.Helpers
 	public sealed class WayPoint : MonoBehaviour
 	{
 		[SerializeField]
-		private float speed;
+		private float speed = 0.35f;
 
 		/// <summary>
-		/// Speed of travel.
+		/// Gets speed of travel.
 		/// </summary>
-		internal float Speed => speed;
+		public float Speed => speed;
 
 		/// <summary>
 		/// Gets the lerp velocity.
 		/// </summary>
 		/// <returns>WayPoint position.</returns>
-		internal Vector2 GetPosition() => transform.position;
+		public Vector2 GetPosition() => transform.position;
 	}
 }

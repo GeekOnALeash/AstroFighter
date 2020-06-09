@@ -1,5 +1,8 @@
+// Copyright (c) Stellar Pixels. All rights reserved.
+
 namespace Com.StellarPixels.AstroFighter.Helpers
 {
+	using System;
 	using UnityAtoms.BaseAtoms;
 	using UnityEngine;
 

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f3ec5ddc84840e68ad798fc8c70f09c, type: 3}
-  m_Name: BulletExplosion@PoolableItem
+  m_Name: Bullet1@PoolableItem 1
   m_EditorClassIdentifier: 
-  poolName: BulletExplosion
-  poolableObject: {fileID: 5037062487676260790, guid: 1cbd2062b85174d629ff62c4228b6b0c, type: 3}
-  preloadSize: 80
+  poolName: Bullet2
+  poolableObject: {fileID: 3611375814137074505, guid: 35d976dc95fbd4935850c203b0f80674, type: 3}
+  preloadSize: 50
   initialPoolCapacity: 100

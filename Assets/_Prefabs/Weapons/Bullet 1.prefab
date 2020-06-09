@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3611375814137074508}
   - component: {fileID: 8773208951484030229}
   m_Layer: 8
-  m_Name: Bullet
+  m_Name: Bullet 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -99,10 +99,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosion: {fileID: 11400000, guid: e96eaa2fd41cc44ffa42b592ec89aefd, type: 2}
-  targetTag: {fileID: 11400000, guid: daf2665f6ab064c2786dfb0a728c7a5f, type: 2}
+  targetTag: {fileID: 11400000, guid: 61ff0b00094304947b477c678d5aa9fa, type: 2}
   attackPoints:
     _usage: 0
-    _value: 5
+    _value: 10
     _constant: {fileID: 0}
     _variable: {fileID: 0}
     _variableInstancer: {fileID: 0}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   useDirectVector: 0
-  direction: 0
+  direction: 1
   vector: {x: 0, y: 10}
   speed: 10
 --- !u!50 &3611375814137074508

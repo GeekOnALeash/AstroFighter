@@ -1,23 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using JetBrains.Annotations;
-using UnityAtoms;
-using UnityEngine;
+﻿// Copyright (c) Stellar Pixels. All rights reserved.
 
-namespace com.ArkAngelApps.TheAvarice.Scriptable
+// ReSharper disable All
+namespace Com.StellarPixels.AstroFighter.Scriptable
 {
+	using global::System;
+	using global::System.Collections.Generic;
+	using global::System.Diagnostics.CodeAnalysis;
+	using JetBrains.Annotations;
+	using UnityEngine;
+
+	[SuppressMessage("ReSharper", "SA1600", Justification = "Not my class.")]
+	[SuppressMessage("ReSharper", "SA1401", Justification = "Not my class.")]
+	[SuppressMessage("ReSharper", "SA1202", Justification = "Not my class.")]
 	public abstract class GenericScriptableObject<T> : ScriptableObject, ISerializationCallbackReceiver
 	{
 		[SerializeField]
 		protected T value;
 
-		[NonSerialized] protected T runtimeValue;
+		[NonSerialized]
+		protected T runtimeValue;
 
 		protected virtual T RuntimeValue
 		{
 			get => runtimeValue;
 			set => runtimeValue = value;
 		}
+
+		public static bool operator ==(
+			[CanBeNull] GenericScriptableObject<T> left,
+			[CanBeNull] GenericScriptableObject<T> right) => Equals(left, right);
+
+		public static bool operator !=(
+			[CanBeNull] GenericScriptableObject<T> left,
+			[CanBeNull] GenericScriptableObject<T> right) => !Equals(left, right);
 
 		internal virtual bool SetValue(T amount)
 		{
@@ -68,9 +83,5 @@ namespace com.ArkAngelApps.TheAvarice.Scriptable
 		}
 
 		public override int GetHashCode() => EqualityComparer<T>.Default.GetHashCode(value);
-
-		public static bool operator ==([CanBeNull] GenericScriptableObject<T> left, [CanBeNull] GenericScriptableObject<T> right) => Equals(left, right);
-
-		public static bool operator !=([CanBeNull] GenericScriptableObject<T> left, [CanBeNull] GenericScriptableObject<T> right) => !Equals(left, right);
 	}
 }

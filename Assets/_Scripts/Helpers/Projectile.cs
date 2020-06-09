@@ -2,7 +2,6 @@
 
 namespace Com.StellarPixels.AstroFighter.Helpers
 {
-	using System;
 	using JetBrains.Annotations;
 	using UnityAtoms.BaseAtoms;
 	using UnityEngine;
@@ -11,13 +10,17 @@ namespace Com.StellarPixels.AstroFighter.Helpers
 	/// <summary>
 	/// Helper for fired bullet.
 	/// </summary>
-	public sealed class Bullet : ExplosionHelper
+	public sealed class Projectile : ExplosionHelper
 	{
 		[SerializeField]
-		private Target target;
+		private StringConstant targetTag;
 
 		[SerializeField]
 		private IntReference attackPoints;
+
+		// ReSharper disable once SuggestBaseTypeForParameter
+		private static bool WasUpperBoundary([NotNull] Collider2D other)
+			=> other.CompareTag("UpperBoundary");
 
 		private void OnBecameInvisible()
 		{
@@ -26,17 +29,13 @@ namespace Com.StellarPixels.AstroFighter.Helpers
 
 		private void OnTriggerEnter2D([NotNull] Collider2D other)
 		{
-			if (other.CompareTag("UpperBoundary"))
+			if (WasUpperBoundary(other))
 			{
 				ReturnToPool();
-			}
-
-			if (other.gameObject.CompareTag("FX"))
-			{
 				return;
 			}
 
-			if (target == Target.Enemy && other.gameObject.CompareTag("Player"))
+			if (!other.CompareTag(targetTag.Value) && !other.CompareTag("Obstacle"))
 			{
 				return;
 			}

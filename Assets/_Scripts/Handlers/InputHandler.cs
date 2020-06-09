@@ -1,4 +1,4 @@
-namespace Com.StellarPixels.AstroFighter.Helpers
+namespace Com.StellarPixels.AstroFighter.Handlers
 {
 	using System.Diagnostics.CodeAnalysis;
 	using UnityAtoms.BaseAtoms;
