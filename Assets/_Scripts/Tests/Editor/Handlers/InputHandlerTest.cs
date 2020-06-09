@@ -1,10 +1,8 @@
-namespace Com.StellarPixels.AstroFighter.Editor.Tests
+namespace Com.StellarPixels.AstroFighter.Tests.Handlers
 {
 	using System;
-	using Com.StellarPixels.AstroFighter.Helpers;
+	using Com.StellarPixels.AstroFighter.Handlers;
 	using NUnit.Framework;
-	using UnityAtoms.BaseAtoms;
-	using UnityEngine;
 
 	/// <inheritdoc />
 	/// <summary>
@@ -38,16 +36,6 @@ namespace Com.StellarPixels.AstroFighter.Editor.Tests
 		public void AtomVariableThrowsNull()
 		{
 			Assert.Throws<NullReferenceException>(SetInputs);
-		}
-
-		/// <summary>
-		/// Setup for tests.
-		/// </summary>
-		private void Setup()
-		{
-			MovementAxis = ScriptableObject.CreateInstance<Vector2Variable>();
-			VerticalPressed = ScriptableObject.CreateInstance<BoolVariable>();
-			HorizontalPressed = ScriptableObject.CreateInstance<BoolVariable>();
 		}
 	}
 }
