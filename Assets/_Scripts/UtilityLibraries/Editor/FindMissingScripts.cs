@@ -4,10 +4,12 @@
 // ReSharper disable once MissingBlankLines
 namespace Com.StellarPixels.UtilityLibraries.Editor
 {
+	using System.Diagnostics.CodeAnalysis;
 	using UnityEditor;
 	using UnityEngine;
 
-	public class FindMissingScripts : EditorWindow
+	[SuppressMessage("ReSharper", "SA1600", Justification = "Not my script.")]
+	public sealed class FindMissingScripts : EditorWindow
 	{
 		[MenuItem("Tools/Find/FindMissingScripts")]
 		public static void ShowWindow()

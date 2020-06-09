@@ -8,9 +8,14 @@ namespace Com.StellarPixels.UtilityLibraries.Editor
 	using UnityEditor;
 	using UnityEngine;
 
+	/// <inheritdoc />
+	/// <summary>
+	/// Raise button for events in inspector.
+	/// </summary>
 	[CustomEditor(typeof(GameEvent))]
 	public sealed class EventEditor : UnityEditor.Editor
 	{
+		/// <inheritdoc/>
 		public override void OnInspectorGUI()
 		{
 			base.OnInspectorGUI();
@@ -19,7 +24,12 @@ namespace Com.StellarPixels.UtilityLibraries.Editor
 
 			GameEvent e = target as GameEvent;
 
-			if (GUILayout.Button("Raise"))
+			if (!GUILayout.Button("Raise"))
+			{
+				return;
+			}
+
+			if (e != null)
 			{
 				e.Raise();
 			}

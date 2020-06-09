@@ -4,10 +4,13 @@
 // ReSharper disable once MissingBlankLines
 namespace Com.StellarPixels.UtilityLibraries.Editor
 {
+	using System.Diagnostics.CodeAnalysis;
+	using JetBrains.Annotations;
 	using UnityEditor;
 	using UnityEngine;
 
-	public class FindMissingScriptsRecursively : EditorWindow
+	[SuppressMessage("ReSharper", "SA1600", Justification = "Not my script.")]
+	public sealed class FindMissingScriptsRecursively : EditorWindow
 	{
 		private static int __goCount;
 		private static int __componentsCount;
@@ -41,7 +44,7 @@ namespace Com.StellarPixels.UtilityLibraries.Editor
 			Debug.Log($"Searched {__goCount.ToString()} GameObjects, {__componentsCount.ToString()} components, found {__missingCount.ToString()} missing");
 		}
 
-		private static void FindInGO(GameObject g)
+		private static void FindInGO([NotNull] GameObject g)
 		{
 			__goCount++;
 			Component[] components = g.GetComponents<Component>();

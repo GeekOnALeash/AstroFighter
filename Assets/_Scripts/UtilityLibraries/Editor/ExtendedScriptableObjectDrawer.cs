@@ -1,12 +1,14 @@
+// Copyright (c) Stellar Pixels. All rights reserved.
+
+// ReSharper disable All
 // Developed by Tom Kail at Inkle
 // Released under the MIT Licence as held at https://opensource.org/licenses/MIT
-
 // Must be placed within a folder named "Editor"
-
 using System;
 using System.Collections.Generic;
-using UnityEngine;
+using System.Diagnostics.CodeAnalysis;
 using UnityEditor;
+using UnityEngine;
 
 /// <summary>
 /// Extends how ScriptableObject object references are displayed in the inspector
@@ -14,6 +16,7 @@ using UnityEditor;
 /// Also provides a button to create a new ScriptableObject if property is null.
 /// </summary>
 [CustomPropertyDrawer(typeof(ScriptableObject), true)]
+[SuppressMessage("ReSharper", "SA1600", Justification = "Not my script.")]
 public class ExtendedScriptableObjectDrawer : PropertyDrawer
 {
 	public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
@@ -26,18 +29,18 @@ public class ExtendedScriptableObjectDrawer : PropertyDrawer
 		}
 
 		var data = property.objectReferenceValue as ScriptableObject;
-		
+
 		if (data == null)
 		{
 			return EditorGUIUtility.singleLineHeight;
 		}
 
 		SerializedObject serializedObject = new SerializedObject(data);
-		
+
 		SerializedProperty prop = serializedObject.GetIterator();
 		if (prop.NextVisible(true))
 		{
-			do 
+			do
 			{
 				if (prop.name == "m_Script")
 				{
@@ -50,7 +53,7 @@ public class ExtendedScriptableObjectDrawer : PropertyDrawer
 			}
 			while (prop.NextVisible(false));
 		}
-		
+
 		// Add a tiny bit of height if open for the background
 		totalHeight += EditorGUIUtility.standardVerticalSpacing;
 		return totalHeight;
@@ -76,18 +79,18 @@ public class ExtendedScriptableObjectDrawer : PropertyDrawer
 			if (property.isExpanded)
 			{
 				// Draw a background that shows us clearly which fields are part of the ScriptableObject
-				GUI.Box(new Rect(0, position.y + EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing - 1, Screen.width, position.height - EditorGUIUtility.singleLineHeight - EditorGUIUtility.standardVerticalSpacing), "");
+				GUI.Box(new Rect(0, position.y + EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing - 1, Screen.width, position.height - EditorGUIUtility.singleLineHeight - EditorGUIUtility.standardVerticalSpacing), string.Empty);
 
 				EditorGUI.indentLevel++;
 				var data = (ScriptableObject) property.objectReferenceValue;
 				SerializedObject serializedObject = new SerializedObject(data);
-				
+
 				// Iterate over all the values and draw them
 				SerializedProperty prop = serializedObject.GetIterator();
 				float y = position.y + EditorGUIUtility.singleLineHeight + EditorGUIUtility.standardVerticalSpacing;
-				if (prop.NextVisible(true)) 
+				if (prop.NextVisible(true))
 				{
-					do 
+					do
 					{
 						// Don't bother drawing the class file
 						if (prop.name == "m_Script")
@@ -101,7 +104,7 @@ public class ExtendedScriptableObjectDrawer : PropertyDrawer
 					}
 					while (prop.NextVisible(false));
 				}
-				
+
 				if (GUI.changed)
 				{
 					serializedObject.ApplyModifiedProperties();
@@ -109,20 +112,20 @@ public class ExtendedScriptableObjectDrawer : PropertyDrawer
 
 				EditorGUI.indentLevel--;
 			}
-		} else 
+		} else
 		{
 			EditorGUI.ObjectField(new Rect(position.x, position.y, position.width - 60, EditorGUIUtility.singleLineHeight), property);
-			if (GUI.Button(new Rect(position.x + position.width - 58, position.y, 58, EditorGUIUtility.singleLineHeight), "Create")) 
+			if (GUI.Button(new Rect(position.x + position.width - 58, position.y, 58, EditorGUIUtility.singleLineHeight), "Create"))
 			{
 				string selectedAssetPath = "Assets";
-				if (property.serializedObject.targetObject is MonoBehaviour behaviour) 
+				if (property.serializedObject.targetObject is MonoBehaviour behaviour)
 				{
 					MonoScript ms = MonoScript.FromMonoBehaviour(behaviour);
-					selectedAssetPath = System.IO.Path.GetDirectoryName(AssetDatabase.GetAssetPath( ms ));
+					selectedAssetPath = System.IO.Path.GetDirectoryName(AssetDatabase.GetAssetPath(ms));
 				}
-				
+
 				Type type = fieldInfo.FieldType;
-				
+
 				if (type.IsArray)
 				{
 					type = type.GetElementType();
@@ -134,17 +137,17 @@ public class ExtendedScriptableObjectDrawer : PropertyDrawer
 				property.objectReferenceValue = CreateAssetWithSavePrompt(type, selectedAssetPath);
 			}
 		}
-		
+
 		property.serializedObject.ApplyModifiedProperties();
 		EditorGUI.EndProperty();
 	}
 
 	// Creates a new ScriptableObject via the default Save File panel
-	private static ScriptableObject CreateAssetWithSavePrompt(Type type, string path) 
+	private static ScriptableObject CreateAssetWithSavePrompt(Type type, string path)
 	{
 		path = EditorUtility.SaveFilePanelInProject("Save ScriptableObject", $"New {type.Name}.asset", "asset", "Enter a file name for the ScriptableObject.", path);
-		
-		if (path == "")
+
+		if (path == string.Empty)
 		{
 			return null;
 		}
