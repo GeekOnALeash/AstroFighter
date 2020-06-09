@@ -6,6 +6,9 @@ TagManager:
   tags:
   - FX
   - UpperBoundary
+  - Enemy
+  - PickUps
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -18,7 +21,7 @@ TagManager:
   - FX
   - Characters
   - Terrain
-  - 
+  - PickUps
   - 
   - 
   - 
@@ -54,6 +57,9 @@ TagManager:
     locked: 0
   - name: Shadow
     uniqueID: 4052368953
+    locked: 0
+  - name: Props
+    uniqueID: 3261266947
     locked: 0
   - name: Character
     uniqueID: 2970362587
