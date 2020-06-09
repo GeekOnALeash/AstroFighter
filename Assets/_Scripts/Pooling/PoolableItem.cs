@@ -2,7 +2,6 @@
 
 namespace Com.StellarPixels.AstroFighter.Pooling
 {
-	using System;
 	using UnityEngine;
 
 	/// <inheritdoc />
@@ -12,7 +11,8 @@ namespace Com.StellarPixels.AstroFighter.Pooling
 	[CreateAssetMenu(fileName = "PoolableItem", menuName = "Scriptable/Pool/PoolableItem", order = 0)]
 	public sealed class PoolableItem : ScriptableObject
 	{
-		[SerializeField] private string poolName;
+		[SerializeField]
+		private string poolName;
 
 		[SerializeField]
 		private PoolableObject poolableObject;
@@ -38,6 +38,9 @@ namespace Com.StellarPixels.AstroFighter.Pooling
 		/// </summary>
 		internal string PoolName => poolName;
 
+		/// <summary>
+		/// Gets initial capacity of the pool.
+		/// </summary>
 		internal int InitialPoolCapacity => initialPoolCapacity;
 	}
 }

@@ -34,7 +34,7 @@ namespace Com.StellarPixels.AstroFighter.Pooling
 		{
 			if (!_pool.ContainsKey(poolName))
 			{
-				throw new NullReferenceException();
+				throw new NullReferenceException("!_pool.ContainsKey(poolName)");
 			}
 
 			var pool = _pool[poolName];
