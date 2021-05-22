@@ -36,7 +36,7 @@ namespace Com.StellarPixels.AstroFighter.Pooling
 		/// <summary>
 		/// Gets pool name.
 		/// </summary>
-		internal string PoolName => poolName;
+		public string PoolName => poolName;
 
 		/// <summary>
 		/// Gets initial capacity of the pool.

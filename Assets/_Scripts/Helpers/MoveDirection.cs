@@ -3,7 +3,7 @@ namespace Com.StellarPixels.AstroFighter.Helpers
 	/// <summary>
 	/// Direction to move.
 	/// </summary>
-	internal enum MoveDirection
+	public enum MoveDirection
 	{
 		Up,
 		Down,

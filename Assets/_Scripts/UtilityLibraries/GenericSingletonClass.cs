@@ -4,6 +4,7 @@
 // ReSharper disable once MissingBlankLines
 namespace Com.StellarPixels.UtilityLibraries
 {
+	using System.Diagnostics.CodeAnalysis;
 	using UnityEngine;
 
 	/// <inheritdoc />
@@ -12,6 +13,7 @@ namespace Com.StellarPixels.UtilityLibraries
 	/// </summary>
 	/// <typeparam name="T">Class to make singleton.</typeparam>
 	[DisallowMultipleComponent]
+	[ExcludeFromCodeCoverage]
 
 	// ReSharper disable once ClassCanBeSealed.Global
 	public class GenericSingletonClass<T> : MonoBehaviour
@@ -22,7 +24,7 @@ namespace Com.StellarPixels.UtilityLibraries
 		/// <summary>
 		/// Gets singleton instance.
 		/// </summary>
-		protected internal static T Instance
+		public static T Instance
 		{
 			get
 			{

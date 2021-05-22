@@ -8,6 +8,9 @@ using UnityEngine;
 
 namespace MyBox
 {
+	using System.Diagnostics.CodeAnalysis;
+
+	[ExcludeFromCodeCoverage]
 	public sealed class MinMaxRangeAttribute : Attribute
 	{
 		public MinMaxRangeAttribute(float min, float max)
@@ -34,6 +37,7 @@ namespace MyBox
 		public int Max;
 	}
 
+	[ExcludeFromCodeCoverage]
 	public static class RangedExtensions
 	{
 		public static float LerpFromRange(this RangedFloat ranged, float t)

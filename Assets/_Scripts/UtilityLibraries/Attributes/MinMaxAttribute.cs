@@ -1,7 +1,9 @@
 // NOTE DONT put in an editor folder
 
+using System.Diagnostics.CodeAnalysis;
 using UnityEngine;
 
+[ExcludeFromCodeCoverage]
 public class MinMaxAttribute : PropertyAttribute
 {
     public float MinLimit = 0;

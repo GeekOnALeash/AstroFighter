@@ -40,10 +40,11 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 891ae7631cf094bf98a4e60844c7bbe4, type: 3}
-    totalSpriteSurfaceArea: 603
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -54,5 +55,6 @@ SpriteAtlas:
   m_PackedSpriteNamesToIndex:
   - IncreaseFirePower@PowerUp
   - IncreaseMaxHealth@PowerUp
+  m_RenderDataMap: {}
   m_Tag: Props
   m_IsVariant: 0

@@ -40,10 +40,11 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: f1e29dd3f46a8415a817ae23f54c682f, type: 3}
-    totalSpriteSurfaceArea: 118368
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -51,116 +52,131 @@ SpriteAtlas:
   m_PackedSprites:
   - {fileID: 21300000, guid: 9ebf4120443ae4044ba3c41c583d0309, type: 3}
   - {fileID: 21300000, guid: 38b9d32048a89434f82d44c213aaa1d2, type: 3}
-  - {fileID: 21300000, guid: 0b3e08b00a6f240b3a1e8793d3d6079f, type: 3}
+  - {fileID: 21300000, guid: fcdde18003935425bac564a5501ba7a1, type: 3}
+  - {fileID: 21300000, guid: 9a0097b035ea64a2fbf700cc7defedab, type: 3}
+  - {fileID: 21300000, guid: 0c5bb8b091efc47fc8f266cd77f3c024, type: 3}
   - {fileID: 21300000, guid: 86a845d0d74d944afa83ccbf17cb9c2e, type: 3}
-  - {fileID: 21300000, guid: becb91e0fb96d4831bcd3f51ab024488, type: 3}
   - {fileID: 21300000, guid: 00d8d5116e2ac47c9912e43b641d0cde, type: 3}
-  - {fileID: 21300000, guid: 34d74e4156877414f91657fdd03d4deb, type: 3}
   - {fileID: 21300000, guid: 0519d1a110b3a4459850ba4b38ca6e7c, type: 3}
-  - {fileID: 21300000, guid: 4bdd3302669d24cdba3efdee742cd1f9, type: 3}
+  - {fileID: 21300000, guid: 39ccb202144e54f01ba0003f23b8e31c, type: 3}
+  - {fileID: 21300000, guid: 6493d402e72ae4869a4a6d0b164145d2, type: 3}
   - {fileID: 21300000, guid: 3566b21234c4b4fafa446942a576fc5a, type: 3}
-  - {fileID: 21300000, guid: fba13e2296d6544a190729d89f67b257, type: 3}
   - {fileID: 21300000, guid: 29028a32780184229ace8245c28d298c, type: 3}
-  - {fileID: 21300000, guid: 4ebcb71305aaf458d8f7f30d14712b0d, type: 3}
+  - {fileID: 21300000, guid: 558eae8245e5441f1b5019f4d5383263, type: 3}
   - {fileID: 21300000, guid: f9193c33c2668436a916c234c56a38ca, type: 3}
   - {fileID: 21300000, guid: c731d34325fee4bb6a40b7458f536419, type: 3}
   - {fileID: 21300000, guid: e7cf5c6317fa44a29b02e9b2c30debce, type: 3}
+  - {fileID: 21300000, guid: 0adae183871d24f37a15f383c8fce307, type: 3}
   - {fileID: 21300000, guid: cbdaa593f3571489789429586ee42f84, type: 3}
+  - {fileID: 21300000, guid: 228a78a319ed74311a45cba89113c84c, type: 3}
+  - {fileID: 21300000, guid: f917bda3fd2ee41b3a37583052c05258, type: 3}
+  - {fileID: 21300000, guid: 3ce51034d0cf843f08c883bf20989224, type: 3}
   - {fileID: 21300000, guid: f69792446e0a842ddae65b8364a0b697, type: 3}
-  - {fileID: 21300000, guid: a7b0d84407deb473ebcbc7ebc24e16db, type: 3}
-  - {fileID: 21300000, guid: e0bd5c44baae8438a939e429b3bf471f, type: 3}
   - {fileID: 21300000, guid: c15ce854b18e34ed98418c1045f6c268, type: 3}
   - {fileID: 21300000, guid: bf3e4a54ff0fb4f7ba7e88f4578fb4e6, type: 3}
   - {fileID: 21300000, guid: 4d2aba74b1ee2428dafc6b8b50c5fa04, type: 3}
   - {fileID: 21300000, guid: 5753c20571fa24c489f39450d65afb02, type: 3}
-  - {fileID: 21300000, guid: 6ba24015796164b2a8e3333e3487090f, type: 3}
+  - {fileID: 21300000, guid: 77593b55790f64ecfb9baba0b47a5198, type: 3}
   - {fileID: 21300000, guid: d09738a53d7354219b4b7bd2aa47539c, type: 3}
+  - {fileID: 21300000, guid: 7afc92d51684c47c99d36f9f106e8777, type: 3}
   - {fileID: 21300000, guid: bea977d55a2854ff9aee110b0c29ae8a, type: 3}
   - {fileID: 21300000, guid: 483b79d50e5b04d74a4d7c4f6a7fc299, type: 3}
   - {fileID: 21300000, guid: 072d5816b5f1b41689e2d0bfec3639d8, type: 3}
   - {fileID: 21300000, guid: 80f2f856e31c3408b922e3d4d880abbd, type: 3}
-  - {fileID: 21300000, guid: c7a3eee69dd1449f78e5bedbcbe161e5, type: 3}
+  - {fileID: 21300000, guid: aad54566315264434a2b6995d86ff1d8, type: 3}
+  - {fileID: 21300000, guid: 142fced6ce99f4dde9a9bd3aa7d191ae, type: 3}
   - {fileID: 21300000, guid: a4be8b970553f4014aa2a01190bfb2b2, type: 3}
-  - {fileID: 21300000, guid: 9bb4d4283c8b84d8385c89370c80fe6c, type: 3}
+  - {fileID: 21300000, guid: 0c273ad79a0f143899f3463ff384b7cc, type: 3}
+  - {fileID: 21300000, guid: 8d748cf77f32a49dfb6d083dd94be394, type: 3}
+  - {fileID: 21300000, guid: 800e9818b66ce44f49e1aff1ae11a694, type: 3}
+  - {fileID: 21300000, guid: 0adde29846ada4a66af96daf427a9c91, type: 3}
   - {fileID: 21300000, guid: a0f09b98ca8a44848ba67f7b94f5bfb3, type: 3}
   - {fileID: 21300000, guid: d886d3e87bf904c48bf4f010679a49f5, type: 3}
   - {fileID: 21300000, guid: e0b3321975c2d40c19765ac7d9c60898, type: 3}
+  - {fileID: 21300000, guid: 91596029d70a94053a9066bdf80e50e8, type: 3}
   - {fileID: 21300000, guid: ef0be629d0bd94578b7b6d2175da5966, type: 3}
-  - {fileID: 21300000, guid: 14583049eb9ca4ac7bb41fae089ab161, type: 3}
-  - {fileID: 21300000, guid: 1ee8e689170034aa7902bee8edfa8d2a, type: 3}
-  - {fileID: 21300000, guid: 1c736ca9825564a17bcf980aae06e50c, type: 3}
   - {fileID: 21300000, guid: 728f63b95b76b42cbb3592151a940510, type: 3}
-  - {fileID: 21300000, guid: 119da72ad3fc54e41a2e4a2fa518bc24, type: 3}
+  - {fileID: 21300000, guid: eb39903a5662d4074b0dc7e326940dbd, type: 3}
   - {fileID: 21300000, guid: 7d1de63ab5a4d43a083484f96d6d9e22, type: 3}
-  - {fileID: 21300000, guid: 9c4b04dab57bf41e69f8bad0eaa7c6af, type: 3}
+  - {fileID: 21300000, guid: 3021be7acd4f342fd96d20896f2bdbd5, type: 3}
   - {fileID: 21300000, guid: 963b3aea1c7a349b880fe420bfa1ca6b, type: 3}
+  - {fileID: 21300000, guid: d740442ba9d6a4b97ad0871f8a075d51, type: 3}
   - {fileID: 21300000, guid: 543a552b4edae43daa10e2e0766a69ff, type: 3}
-  - {fileID: 21300000, guid: 694373db404ed43dea5f6797e5a14a00, type: 3}
+  - {fileID: 21300000, guid: 21a64bfbf793045329d462bd46180e19, type: 3}
   - {fileID: 21300000, guid: 864dfb3c52cf3403ebd58d419f7dc5e6, type: 3}
   - {fileID: 21300000, guid: 46c0647c153ad491da5feac9fc998a32, type: 3}
   - {fileID: 21300000, guid: 512bffbcc648444dc8de62ea3950157f, type: 3}
-  - {fileID: 21300000, guid: 863344cc9978945c48e572a46f0d62e1, type: 3}
-  - {fileID: 21300000, guid: 9c7adbcc2b7994113a2c8845f2712ad8, type: 3}
+  - {fileID: 21300000, guid: 11e135cc9b74a4b7b8e89cff0db4ad85, type: 3}
+  - {fileID: 21300000, guid: a4a1eeecab88f4a74a42013e001b9a3a, type: 3}
   - {fileID: 21300000, guid: bc91c00daf2884adab82fd716402f6e7, type: 3}
   - {fileID: 21300000, guid: 0b7bab0d51557485fafce637356cdde3, type: 3}
+  - {fileID: 21300000, guid: eb30444d7e2ee477ca6d4294b9d86a46, type: 3}
+  - {fileID: 21300000, guid: 4bd381be3c8434e0ea79090c24e98e49, type: 3}
   - {fileID: 21300000, guid: fc922b4f032d84b3688d545299aa1a4a, type: 3}
-  - {fileID: 21300000, guid: 82bc288f73f5c4b86a0c4dd8c5739c57, type: 3}
   m_PackedSpriteNamesToIndex:
-  - Ground_RockPath@Path-BottomRight
+  - Ground_StonePath@Path-BottomRight
   - Ground_Path@Grass-TopRight
-  - Cliff@FrontRight
-  - Ground_RockPath@Path-Left
-  - Cliff@FrontLeft
-  - Ground_RockPath@Path-InnerTopLeft
-  - Cliff@TopUpperCenterEdge1
+  - Grass_Tuft@Inner
+  - Cliff1
+  - Grass_Tuft@Right
+  - Ground_StonePath@Path-Left
+  - Ground_StonePath@Path-InnerTopLeft
   - Ground_Path@Grass-TopLeft
-  - Cliff@TopUpperLeftEdge
+  - Grass_Tuft@TopLeft
+  - Ground_Path@Grass-Right3
   - Ground_Path@Normal3
-  - Ground_Path@Normal6
-  - Ground_RockPath@Path-InnerTopRight
-  - Ground_Path@Light-Normal2
+  - Ground_StonePath@Path-InnerTopRight
+  - Grass_Tuft@Bottom
   - Ground_Path@Grass-Right2
-  - Ground_RockPath@Normal4
+  - Ground_StonePath@Normal4
   - Ground_Path@Grass-Bottom
+  - Tree-Medium
   - Ground_Path@Normal4
+  - Ground_RockPath@Left
+  - Ground_RockPath@TopRight
+  - Grass_Tuft@Top
   - Ground_Path@Grass-Top
-  - Ground_Path@Light-Normal5
-  - Ground_Path@Normal5
-  - Ground_RockPath@Normal1
+  - Ground_StonePath@Normal1
   - Ground_Path@Grass-Right
-  - Ground_RockPath@Normal3
+  - Ground_StonePath@Normal3
   - Ground_Path@Grass-BottomRight
-  - Ground_Path@Light-Normal1
-  - Ground_RockPath@Path-BottomLeft
+  - Ground_RockPath@Right
+  - Ground_StonePath@Path-BottomLeft
+  - Grass_Tuft@TopRight
   - Ground_Path@Grass-BottomLeft
-  - Ground_RockPath@Path-Bottom
-  - Ground_RockPath@Normal2
+  - Ground_StonePath@Path-Bottom
+  - Ground_StonePath@Normal2
   - Ground_Grass@Normal
-  - Cliff@TopLeft1
+  - Ground_Path@Grass-Left4
+  - Tree-Small
   - Ground_Path@Normal2
-  - Ground_Path@Light-Normal3
+  - Ground_RockPath@BottomLeft
+  - Grass_Tuft
+  - Ground_Path@Grass-Right4
+  - Ground_RockPath@Top
   - Ground_Path@Normal1
-  - Ground_RockPath@Path-TopLeft
-  - Ground_RockPath@Path-InnerBottomLeft
+  - Ground_StonePath@Path-TopLeft
+  - Ground_StonePath@Path-InnerBottomLeft
+  - Ground_RockPath@BottomRight
   - Ground_Path@Grass-Left
-  - Cliff@FrontCenter1
-  - Ground_Path@Normal
-  - Ground_Path@Light-Normal4
-  - Ground_RockPath@Path-Top
-  - Cliff@TopUpperCenterEdge2
+  - Ground_StonePath@Path-Top
+  - Ground_RockPath@Normal1
   - Ground_Path@Grass-InnerBottomRight
-  - Cliff@TopRight2
+  - Grass_Tuft@BottomLeft
   - Ground_Path@Grass-InnerBottomLeft
-  - Ground_RockPath@Path-Right
-  - Cliff@TopUpperRightEdge
-  - Ground_RockPath@Path-InnerBottomRight
+  - Ground_Path@Grass-Left3
+  - Ground_StonePath@Path-Right
+  - Ground_RockPath@Bottom
+  - Ground_StonePath@Path-InnerBottomRight
   - Ground_Path@Grass-InnerTopLeft
   - Ground_Path@Grass-InnerTopRight
-  - Cliff@FrontCenter2
-  - Cliff@TopRight1
-  - Ground_RockPath@Normal5
-  - Ground_RockPath@Path-TopRight
+  - Tree-Large
+  - Grass_Tuft@Left
+  - Ground_StonePath@Normal5
+  - Ground_StonePath@Path-TopRight
+  - Grass_Tuft@BottomRight
+  - Ground_RockPath@TopLeft
   - Ground_Path@Grass-Left2
-  - Cliff@TopLeft2
+  m_RenderDataMap: {}
   m_Tag: Terrain
   m_IsVariant: 0

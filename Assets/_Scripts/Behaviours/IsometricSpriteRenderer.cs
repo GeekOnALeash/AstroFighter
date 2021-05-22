@@ -1,6 +1,7 @@
 namespace Com.StellarPixels.AstroFighter.Behaviours
 {
 	using System;
+	using System.Diagnostics.CodeAnalysis;
 	using Com.StellarPixels.UtilityLibraries;
 	using Com.StellarPixels.UtilityLibraries.Attributes;
 	using Unity.Mathematics;
@@ -12,6 +13,7 @@ namespace Com.StellarPixels.AstroFighter.Behaviours
 	/// Adjusts sprite renderer sorting order based on position.
 	/// </summary>
 	[ExecuteInEditMode]
+	[ExcludeFromCodeCoverage]
 	public sealed class IsometricSpriteRenderer : CachedTransformBase
 	{
 		private const int IsometricRangePerYUnit = -10;

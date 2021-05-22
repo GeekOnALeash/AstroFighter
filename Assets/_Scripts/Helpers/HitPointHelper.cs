@@ -3,40 +3,59 @@
 namespace Com.StellarPixels.AstroFighter.Helpers
 {
 	using System;
+	using Com.StellarPixels.AstroFighter.Interfaces;
 	using UnityAtoms.BaseAtoms;
-	using UnityEngine;
 
 	/// <inheritdoc cref="ITakesDamage" />
 	/// <summary>
 	/// Helper for objects that can take damage.
 	/// </summary>
-	[RequireComponent(typeof(ExplosionHelper))]
-	public sealed class HitPointHelper : MonoBehaviour, ITakesDamage
+	public sealed class HitPointHelper
 	{
-		[SerializeField]
-		private IntReference hitPoints;
+		private readonly IntReference _hitPoints;
 
-		/// <inheritdoc/>
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="HitPointHelper"/> class.
+		/// </summary>
+		/// <param name="hitPoints">IntReference hitPoints UnityAtoms.</param>
+		public HitPointHelper(IntReference hitPoints) => _hitPoints = hitPoints;
+
+		/// <summary>
+		/// Current hit points.
+		/// </summary>
+		public IntReference HitPoints => _hitPoints;
+
+		/// <summary>
+		/// Gets a value indicating whether the objects HP has dropped to zero.
+		/// </summary>
+		public bool IsZero { get; private set; }
+
+		/// <summary>
+		/// Cause damage to object.
+		/// </summary>
+		/// <param name="amount">Amount of damage to cause.</param>
 		public void CauseDamage(int amount)
 		{
-			hitPoints.Value -= amount;
-
-			if (hitPoints.Value <= 0)
+			if (amount <= 0)
 			{
-				Destroy();
+				throw new ArgumentOutOfRangeException(nameof(amount), $"{nameof(amount)} can not be negative or zero.");
+			}
+
+			_hitPoints.Value -= amount;
+
+			if (_hitPoints.Value <= 0)
+			{
+				IsZero = true;
 			}
 		}
 
-		/// <inheritdoc/>
+		/// <summary>
+		/// Destroy instantly the object.
+		/// </summary>
 		public void DestroyInstantly()
 		{
-			CauseDamage(hitPoints.Value);
-		}
-
-		private void Destroy()
-		{
-			var explosion = gameObject.GetComponent<IExplode>();
-			explosion?.Explode();
+			CauseDamage(_hitPoints.Value);
 		}
 	}
 }

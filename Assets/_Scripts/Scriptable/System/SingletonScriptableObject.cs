@@ -7,6 +7,7 @@ namespace Com.StellarPixels.AstroFighter.Scriptable.System
 	using UnityEngine;
 
 	[SuppressMessage("ReSharper", "SA1600", Justification = "Not my script.")]
+	[ExcludeFromCodeCoverage]
 	public class SingletonScriptableObject<T> : ScriptableObject
 		where T : ScriptableObject
 	{

@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - PickUps
   - Obstacle
+  - Buildings
   layers:
   - Default
   - TransparentFX
@@ -22,7 +23,7 @@ TagManager:
   - Characters
   - Terrain
   - PickUps
-  - 
+  - Buildings
   - 
   - 
   - 
@@ -54,6 +55,12 @@ TagManager:
     locked: 0
   - name: Environment
     uniqueID: 1067188877
+    locked: 0
+  - name: Building Shadow
+    uniqueID: 27910731
+    locked: 0
+  - name: Building
+    uniqueID: 1186347787
     locked: 0
   - name: Shadow
     uniqueID: 4052368953

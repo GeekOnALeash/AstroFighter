@@ -2,7 +2,9 @@ using System;
 
 namespace Unity.IL2CPP.CompilerServices
 {
-    /// <summary>
+	using System.Diagnostics.CodeAnalysis;
+
+	/// <summary>
     /// The code generation options available for IL to C++ conversion.
     /// Enable or disabled these with caution.
     /// </summary>
@@ -60,6 +62,7 @@ namespace Unity.IL2CPP.CompilerServices
     ///     }
     /// </summary>
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Method | AttributeTargets.Property, Inherited = false, AllowMultiple = true)]
+	[ExcludeFromCodeCoverage]
     public class Il2CppSetOptionAttribute : Attribute
     {
         public Option Option { get; private set; }

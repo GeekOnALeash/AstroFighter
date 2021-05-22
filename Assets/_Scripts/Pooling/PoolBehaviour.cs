@@ -24,7 +24,7 @@ namespace Com.StellarPixels.AstroFighter.Pooling
 		/// Returns the object back to the pool.
 		/// </summary>
 		/// <param name="poolable">Poolable object to return.</param>
-		internal static void Return([NotNull] PoolableObject poolable)
+		public static void Return([NotNull] PoolableObject poolable)
 			=> poolable.gameObject.SetActive(false);
 
 		/// <summary>
@@ -35,7 +35,7 @@ namespace Com.StellarPixels.AstroFighter.Pooling
 		/// <returns>Item from the pool.</returns>
 		[NotNull]
 		[SuppressMessage("ReSharper", "SA1202", Justification = "Unity events first.")]
-		internal PoolableObject GetProjectileAtPosition(
+		public PoolableObject GetProjectileAtPosition(
 			[NotNull] string poolName, Vector2 position)
 		{
 			var newProjectile = projectilePool.GetPooledObject(poolName);
@@ -50,7 +50,7 @@ namespace Com.StellarPixels.AstroFighter.Pooling
 		/// <param name="position">Position to set.</param>
 		/// <returns>Item from the pool.</returns>
 		[NotNull]
-		internal PoolableObject GetExplosionAtPosition([NotNull] string poolName, Vector2 position)
+		public PoolableObject GetExplosionAtPosition([NotNull] string poolName, Vector2 position)
 		{
 			var newExplosion = explosionPool.GetPooledObject(poolName);
 			newExplosion.transform.position = position;

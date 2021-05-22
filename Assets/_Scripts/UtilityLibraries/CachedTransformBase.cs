@@ -4,12 +4,14 @@
 // ReSharper disable once MissingBlankLines
 namespace Com.StellarPixels.UtilityLibraries
 {
+	using System.Diagnostics.CodeAnalysis;
 	using UnityEngine;
 
 	/// <inheritdoc />
 	/// <summary>
 	/// Cache for gameObject transform.
 	/// </summary>
+	[ExcludeFromCodeCoverage]
 	public class CachedTransformBase : MonoBehaviour
 	{
 		private Transform _thisTransform;

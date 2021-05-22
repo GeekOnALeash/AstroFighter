@@ -2,6 +2,7 @@
 
 namespace Com.StellarPixels.AstroFighter.Tests.Helpers
 {
+	using Com.StellarPixels.AstroFighter.Behaviours;
 	using Com.StellarPixels.AstroFighter.Helpers;
 	using NUnit.Framework;
 	using UnityEngine;

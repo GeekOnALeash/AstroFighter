@@ -63,8 +63,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -85,6 +85,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -386,6 +388,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Bullet Explosion_0: 3446878951465588338
+      Bullet Explosion_1: 9085083961675938830
+      Bullet Explosion_5: 7464954915652299504
+      Bullet Explosion_9: -7161885685425712781
+      Bullet Explosion_8: 8940023979327817128
+      Bullet Explosion_3: -6964191914541030211
+      Bullet Explosion_2: -8345307750667906139
+      Bullet Explosion_7: -2186286280926938127
+      Bullet Explosion_6: -6129446341363469647
+      Bullet Explosion_4: -2825890160642299113
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
