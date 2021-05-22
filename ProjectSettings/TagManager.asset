@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - FX
+  - UpperBoundary
+  - Enemy
+  - PickUps
+  - Obstacle
+  - Buildings
   layers:
   - Default
   - TransparentFX
@@ -14,11 +19,11 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - FX
+  - Characters
+  - Terrain
+  - PickUps
+  - Buildings
   - 
   - 
   - 
@@ -51,8 +56,17 @@ TagManager:
   - name: Environment
     uniqueID: 1067188877
     locked: 0
+  - name: Building Shadow
+    uniqueID: 27910731
+    locked: 0
+  - name: Building
+    uniqueID: 1186347787
+    locked: 0
   - name: Shadow
     uniqueID: 4052368953
+    locked: 0
+  - name: Props
+    uniqueID: 3261266947
     locked: 0
   - name: Character
     uniqueID: 2970362587

@@ -4,6 +4,8 @@ using System;
 
 namespace EasyButtons
 {
+	using System.Diagnostics.CodeAnalysis;
+
 	public enum ButtonMode
 	{
 		AlwaysEnabled,
@@ -20,6 +22,7 @@ namespace EasyButtons
 	}
 
 	[AttributeUsage(AttributeTargets.Method)]
+	[ExcludeFromCodeCoverage]
 	public sealed class ButtonAttribute : Attribute
 	{
 		private string _name;

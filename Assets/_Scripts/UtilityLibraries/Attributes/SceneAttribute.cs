@@ -1,6 +1,8 @@
 // Copyright (c) Stellar Pixels. All rights reserved.
 
-namespace Com.StellarPixels.AstroJewels.UtilityLibraries.Attributes
+// ReSharper disable once CheckNamespace
+// ReSharper disable once MissingBlankLines
+namespace Com.StellarPixels.UtilityLibraries.Attributes
 {
 	using UnityEngine;
 

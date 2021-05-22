@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace EasyButtons
 {
+	using System.Diagnostics.CodeAnalysis;
+
+	[ExcludeFromCodeCoverage]
     public class CustomEditorButtonsExample : MonoBehaviour
     {
         [Button("Custom Editor Example")]

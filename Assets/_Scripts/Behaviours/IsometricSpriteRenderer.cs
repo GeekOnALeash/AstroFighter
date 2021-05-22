@@ -2,17 +2,24 @@ namespace Com.StellarPixels.AstroFighter.Behaviours
 {
 	using System;
 	using System.Diagnostics.CodeAnalysis;
-	using com.ArkAngelApps.TheAvarice.Behaviours;
-	using com.ArkAngelApps.UtilityLibraries.Attributes;
+	using Com.StellarPixels.UtilityLibraries;
+	using Com.StellarPixels.UtilityLibraries.Attributes;
 	using Unity.Mathematics;
 	using UnityEngine;
 	using UnityEngine.Rendering;
 
+	/// <inheritdoc />
+	/// <summary>
+	/// Adjusts sprite renderer sorting order based on position.
+	/// </summary>
 	[ExecuteInEditMode]
-	public sealed class IsometricSpriteRenderer : BaseBehaviour
+	[ExcludeFromCodeCoverage]
+	public sealed class IsometricSpriteRenderer : CachedTransformBase
 	{
 		private const int IsometricRangePerYUnit = -10;
-		public bool usesSortingGroup = true;
+
+		[SerializeField]
+		private bool usesSortingGroup = true;
 
 		[ShowWhen(nameof(usesSortingGroup), false)]
 		[SerializeField]
@@ -23,10 +30,12 @@ namespace Com.StellarPixels.AstroFighter.Behaviours
 		private SortingGroup sortingGroup;
 
 		[Tooltip("Will use this object to compute z-order")]
-		public Transform target;
+		[SerializeField]
+		private Transform target;
 
 		[Tooltip("Use this to offset the object slightly in front or behind the Target object")]
-		public int targetOffset;
+		[SerializeField]
+		private int targetOffset;
 
 		private float3 _position;
 		private float3 _oldPosition;
@@ -37,14 +46,13 @@ namespace Com.StellarPixels.AstroFighter.Behaviours
 			DoSetup();
 		}
 
-		[SuppressMessage("ReSharper", "InvertIf")]
 		private void LateUpdate()
 		{
 			_position = target.position;
 
 			if (Math.Abs(_oldPosition.y - target.position.y) > 0.01f)
 			{
-				int sortingOrder = (int) ((_position.y - _sizeY / 2) * IsometricRangePerYUnit) + targetOffset;
+				int sortingOrder = (int)((_position.y - (_sizeY / 2)) * IsometricRangePerYUnit) + targetOffset;
 
 				if (usesSortingGroup)
 				{

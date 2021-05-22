@@ -40,10 +40,11 @@ SpriteAtlas:
       allowAlphaSplitting: 0
       enableRotation: 1
       enableTightPacking: 1
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
     variantMultiplier: 1
     packables:
     - {fileID: 102900000, guid: 973fa5633fddf4c91874307a9636b867, type: 3}
-    totalSpriteSurfaceArea: 112088
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -78,5 +79,6 @@ SpriteAtlas:
   - planes_01A-2@Forward
   - planes_01A-11@Banking
   - planes_01A-6@HalfBank
+  m_RenderDataMap: {}
   m_Tag: Characters
   m_IsVariant: 0

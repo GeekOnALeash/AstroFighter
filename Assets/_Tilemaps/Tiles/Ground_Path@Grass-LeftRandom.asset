@@ -37,3 +37,5 @@ MonoBehaviour:
   m_Sprites:
   - {fileID: 21300000, guid: ef0be629d0bd94578b7b6d2175da5966, type: 3}
   - {fileID: 21300000, guid: fc922b4f032d84b3688d545299aa1a4a, type: 3}
+  - {fileID: 21300000, guid: d740442ba9d6a4b97ad0871f8a075d51, type: 3}
+  - {fileID: 21300000, guid: aad54566315264434a2b6995d86ff1d8, type: 3}

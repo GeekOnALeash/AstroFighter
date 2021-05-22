@@ -75,8 +75,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 0
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -97,6 +97,8 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
@@ -335,6 +337,14 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Exposion_2: 2581504712264316984
+      Exposion_1: -7336387537449843227
+      Exposion_3: 977431446623456546
+      Exposion_0: -6093958102957776536
+      Exposion_4: -2687299911826369275
+      Exposion_5: 475744637455869730
+      Exposion_6: 4613658724439213027
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -1,0 +1,15 @@
+{
+    "name": "Com.StellarPixels.AstroFighter.Pooling",
+    "references": [
+        "GUID:420d2eb6502894bd6b76184a961c0cb8"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

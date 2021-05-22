@@ -1,6 +1,5 @@
 namespace Com.StellarPixels.AstroFighter.Handlers
 {
-	using Com.StellarPixels.AstroFighter.Scriptable.System;
 	using UnityEngine;
 
 	/// <inheritdoc />
@@ -10,6 +9,9 @@ namespace Com.StellarPixels.AstroFighter.Handlers
 	[RequireComponent(typeof(Camera))]
 	public sealed class CameraHandler : MonoBehaviour
 	{
+		private const float BoundsMin = 0.14f;
+		private const float BoundsMax = 0.86f;
+
 		private Camera _camera;
 
 		private void Awake()
@@ -17,9 +19,26 @@ namespace Com.StellarPixels.AstroFighter.Handlers
 			_camera = GetComponent<Camera>();
 		}
 
-		private void Start()
+		/// <summary>
+		/// Clamps position to camera bounds.
+		/// </summary>
+		/// <param name="positionToClamp">Position to clamp.</param>
+		/// <returns>Clamped position.</returns>
+		internal Vector2 GetClampedPosition(Vector2 positionToClamp)
 		{
-			SystemVariables.Instance.mainCamera = _camera;
+			Vector2 newPosition = _camera.WorldToViewportPoint(positionToClamp);
+			newPosition.x = Mathf.Clamp(newPosition.x, BoundsMin, BoundsMax);
+			newPosition.y = Mathf.Clamp(newPosition.y, BoundsMin, BoundsMax);
+
+			return newPosition;
 		}
+
+		/// <summary>
+		/// Gets ViewportToWorldPoint from Camera component.
+		/// </summary>
+		/// <param name="position">Position to get.</param>
+		/// <returns>ViewportToWorldPoint.</returns>
+		internal Vector2 GetViewportToWorldPoint(Vector2 position)
+			=> _camera.ViewportToWorldPoint(position);
 	}
 }
